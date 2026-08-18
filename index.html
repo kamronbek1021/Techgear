@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGear Catalog</title>
+    <!-- FontAwesome logotiplar va ikonkalari uchun -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS ulash -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container header-content">
+            <ul class="nav-links">
+                <li><a href="#" class="active">Bosh sahifa</a></li>
+                <li><a href="#katalog">Katalog</a></li>
+                <li><a href="#">Xizmatlar</a></li>
+                <li><a href="#">A'zolar</a></li>
+            </ul>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass" style="color: var(--text-muted);"></i>
+                <input type="text" id="searchInput" placeholder="Mahsulot qidirish..." onkeyup="filterProducts()">
+            </div>
+
+            <button class="cart-btn" onclick="toggleCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Savat (<span id="cartCount">0</span>)</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Hero Section (Tepadagi Bitta Asosiy Mahsulot) -->
+        <section class="hero">
+            <div>
+                <span class="hero-badge">Top Mahsulot &bull; Gaming Line</span>
+                <h1 class="hero-title">Titan X Pro Gaming Laptop</h1>
+                <p class="hero-desc">Intel Core i9 | RTX 4090 | 32GB RAM | 240Hz OLED Displey. Eng murakkab o'yinlar va dizayn topshiriqlari uchun maksimal quvvat.</p>
+                <div class="hero-price">$3,499.99</div>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="addToCart('Titan X Pro Gaming Laptop', 3499.99)">
+                        <i class="fa-solid fa-bag-shopping"></i> Savatga qo'shish
+                    </button>
+                    <button class="btn-secondary">Batafsil ma'lumot</button>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600&auto=format&fit=crop&q=80" alt="Titan Laptop">
+            </div>
+        </section>
+
+        <!-- Catalog Section -->
+        <section id="katalog">
+            <div class="categories-title">
+                <h2>TEXNIKA <span>KATALOGI</span></h2>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="filter-bar">
+                <button class="filter-btn active" onclick="filterCategory('all', this)">Barchasi</button>
+                <button class="filter-btn" onclick="filterCategory('monitor', this)">Monitorlar</button>
+                <button class="filter-btn" onclick="filterCategory('mouse', this)">Sichqonchalar</button>
+                <button class="filter-btn" onclick="filterCategory('cpu', this)">Protsessorlar</button>
+                <button class="filter-btn" onclick="filterCategory('headset', this)">Naushniklar</button>
+                <button class="filter-btn" onclick="filterCategory('mic', this)">Mikrofonlar</button>
+                <button class="filter-btn" onclick="filterCategory('laptop', this)">Noutbuklar</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="catalog-grid" id="productGrid">
+                <!-- Javascript orqali mahsulotlar yaratiladi -->
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Xaridingiz</h3>
+                <button class="close-btn" onclick="toggleCart()">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p style="color: var(--text-muted); text-align: center;">Savat hozircha bo'sh.</p>
+            </div>
+            <div class="cart-total">
+                <span>Jami:</span>
+                <span id="cartTotal" style="color: var(--accent-green);">$0.00</span>
+            </div>
+            <button class="btn-primary" style="width: 100%; margin-top: 15px;">Buyurtma berish</button>
+        </div>
+    </div>
+
+    <!-- JavaScript ulash -->
+    <script src="script.js"></script>
+</body>
+</html>
