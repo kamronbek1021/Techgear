@@ -2,8 +2,8 @@
 
 > Zamonaviy geyming va kompyuter texnikalari katalogi. Foydalanuvchilarga mahsulotlarni qidirish, kategoriyalar bo'yicha saralash va interaktiv savatdan foydalanish imkoniyatini beruvchi yengil va tezkor web ilova.
 
-🌐 **Live Demo:** [techgear-catalog.onrender.com](https://techgear-catalog.onrender.com)  
-💻 **GitHub Repository:** [github.com/kamronbek1021/techgear-catalog](https://github.com/kamronbek1021/techgear-catalog)
+🌐 **Live Demo:** [techgear-catolog.onrender.com](https://techgear-catolog.onrender.com)  
+💻 **GitHub Repository:** [github.com/kamronbek1021/techgear](https://github.com/kamronbek1021/techgear)
 
 ---
 
